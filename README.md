@@ -6,7 +6,8 @@ This from Augspurger 1983.
 
 > ## APPENDIX 1. Methods of Calculating Synchrony (modified from Primack 1980).
 >
-> **A.** Synchrony of a given individual with its conspecifics: $X_{i}$, the index of synchrony for individual i, is defined
+> **A.** Synchrony of a given individual with its conspecifics: 
+> $X_{i}$, the index of synchrony for individual i, is defined
 >
 > $$
 > X_{i} = (\frac{1}{n-1})(\frac{1}{f_{i}})\sum_{j = i}^{n} e_{j != i}
@@ -21,7 +22,8 @@ This from Augspurger 1983.
 > When X = 1.0, perfect synchrony occurs, i.e., all flowering days of individual *i* overlap with all flowering days of each other individual, *j \# i*, in the \> population.\
 > When X = 0.0, no synchrony occurs, i.e., no overlap occurs among any of the flowering days of individual *i* and any other individual, *j =# i*, in the \> population.
 >
-> **B.** Synchrony of the population: $Z$, the index of population synchrony, is defined as:
+> **B.** Synchrony of the population:
+> $Z$, the index of population synchrony, is defined as:
 >
 > $$
 > Z= \frac{1}{n}\sum_{j = 1}^{n}X_{i}
