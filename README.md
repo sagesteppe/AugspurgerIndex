@@ -34,6 +34,12 @@ This from Augspurger 1983.
 >
 > where $X_{i}$ is synchrony of individual *i* with its conspecifics from part A (above)
 
+
+
+
+![BigRedBillWalton](./images/AugsPanel.png)
+
+
 ## References:
 
 Augspurger, Carol K. “Phenology, Flowering Synchrony, and Fruit Set of Six Neotropical Shrubs.” Biotropica, vol. 15, no. 4, 1983, pp. 257–267. JSTOR, https://doi.org/10.2307/2387650. Accessed 19 Mar. 2022. 
