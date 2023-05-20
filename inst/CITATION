@@ -6,7 +6,5 @@ citEntry(
   author   = as.person("Reed Clark Benkendorf"),
   year     = 2023,
   url      = "https://github.com/sagesteppe/AugspurgerIndex",
-  textVersion = paste(
-
-  )
+  textVersion = textVersion = paste0(author, "(", year, "). ", title, url)
 )

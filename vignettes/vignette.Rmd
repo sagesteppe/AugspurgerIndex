@@ -27,8 +27,6 @@ remotes::install_github('sagesteppe/AugspurgerIndex') # one option
 install.packages('AugspurgerIndex')
 
 citation('AugspurgerIndex')
-
-usethis::use_citation()
 ```
 
 
