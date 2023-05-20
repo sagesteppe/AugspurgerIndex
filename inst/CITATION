@@ -1,4 +1,4 @@
-citHeader("To cite AugspurgerIndex in publications use:")
+citHeader("Please cite AugspurgerIndex in publications using:")
 
 citEntry(
   entry    = "Misc",
@@ -6,5 +6,5 @@ citEntry(
   author   = as.person("Reed Clark Benkendorf"),
   year     = 2023,
   url      = "https://github.com/sagesteppe/AugspurgerIndex",
-  textVersion = textVersion = paste0(author, "(", year, "). ", title, url)
+  textVersion = paste0(author, "(", year, "). ", title, url)
 )
