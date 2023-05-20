@@ -27,6 +27,8 @@ remotes::install_github('sagesteppe/AugspurgerIndex') # one option
 install.packages('AugspurgerIndex')
 
 citation('AugspurgerIndex')
+
+usethis::use_citation()
 ```
 
 
@@ -69,4 +71,4 @@ synchrony |>
 head(10)
 ```
 
-An exciting possibility of this implementation of Augspurgers Index, and which warrants consideration for ephermal crepuscular or nocturnal species, is that it is able to operate on overlapping phenologies within a day, as recorded down to the second. 
+An exciting possibility of this implementation of Augspurgers Index, and which warrants consideration for ephemeral crepuscular or nocturnal species, is that it is able to operate on overlapping phenologies within a day, as recorded down to the second. 
