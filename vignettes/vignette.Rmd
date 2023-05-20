@@ -25,8 +25,21 @@ The package can be installed from either github, using the remotes package, or C
 # install.packages('remotes', dependencies = T)
 remotes::install_github('sagesteppe/AugspurgerIndex') # one option 
 install.packages('AugspurgerIndex')
-citation("AugspurgerIndex")
 ```
+
+citHeader("To cite AugspurgerIndex in publications use:")
+
+citEntry(
+  entry    = "Miscellaneous",
+  title    = 'AugspurgerIndex: Calculate Augspurgers Index of Synchrony',
+  author   = 'Reed Clark Benkendorf',
+  note     = 'R package version 0.1.0',
+  year     = '2023',
+  url      = {https://github.com/sagesteppe/AugspurgerIndex},
+  textVersion = paste(
+
+  )
+)
 
 ```{r attach package to session, message = F, warning = F}
 library(AugspurgerIndex)
