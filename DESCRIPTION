@@ -4,7 +4,8 @@ Title: Calculate Augspurgers Index of Synchrony
 Version: 0.1.0
 Author: Reed Clark Benkendorf
 Maintainer: steppe <reedbenkendorf27@gmail.com>
-Description: This package has a single function to calculate Augspurgers Index of Synchrony. This is an unfortunate neccessity as the last      packages which implemented this function have since been removed from CRAN for failing builds, or are in manners which do not function on rectangular data.
+Description: This package has a single function to calculate Augspurgers Index of Synchrony. This is an unfortunate neccessity as the last packages which implemented this function have since been removed from CRAN for failing builds, or are in manners which do not function on rectangular data.
 License: MIT
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
