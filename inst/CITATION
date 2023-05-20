@@ -1,7 +1,7 @@
 citHeader("To cite AugspurgerIndex in publications use:")
 
 citEntry(
-  entry    = "Miscellaneous",
+  entry    = "Misc",
   title    = 'AugspurgerIndex: Calculate Augspurgers Index of Synchrony',
   author   = 'Reed Clark Benkendorf',
   note     = 'R package version 0.1.0',

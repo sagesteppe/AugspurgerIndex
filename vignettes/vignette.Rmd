@@ -25,6 +25,8 @@ The package can be installed from either github, using the remotes package, or C
 # install.packages('remotes', dependencies = T)
 remotes::install_github('sagesteppe/AugspurgerIndex') # one option 
 install.packages('AugspurgerIndex')
+
+citation('AugspurgerIndex')
 ```
 
 citHeader("To cite AugspurgerIndex in publications use:")
