@@ -10,7 +10,7 @@
 #' @return a dataframe with attached results, see example
 #' @examples
 #' library(AugspurgerIndex)
-#' flowering_data <- data('flowering_data')
+#' data('flowering_data')
 #' head(flowering_data)
 #' synchrony <- augs_synchrony(dataset = flowering_data,
 #'   frst_day = flower_start, lst_day = flower_end,

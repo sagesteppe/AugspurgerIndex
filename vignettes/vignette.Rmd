@@ -25,33 +25,46 @@ The package can be installed from either github, using the remotes package, or C
 # install.packages('remotes', dependencies = T)
 remotes::install_github('sagesteppe/AugspurgerIndex') # one option 
 install.packages('AugspurgerIndex')
+citation("AugspurgerIndex")
 ```
 
 ```{r attach package to session, message = F, warning = F}
 library(AugspurgerIndex)
 ```
 
+The data should be in Day of year format. You can obtain values like this using lubridate::ydoy. As we will show below, this function can also convert back to a standard date format 
 
-```{r import and view structure of data}
-
-flowering_data <- data(flowering_data, package = "AugspurgerIndex")
-
-head(flowering_data)
+```{r}
+lubridate::yday( as.Date('2011-01-01', '%Y-%m-%d') )  # jan 1st, first day of year
+lubridate::yday( as.Date('2011-12-31', '%Y-%m-%d') )  # dec 31st, first day of year
+lubridate::yday( as.Date('2011-10-11', '%Y-%m-%d') ) # october 6th, 284 day of year
 ```
 
-```{r run function, eval = F}
+
+```{r import and view structure of data}
+data(flowering_data, package = "AugspurgerIndex")
+head(flowering_data[,1:4])
+```
+
+```{r run function}
 
 synchrony <- augs_synchrony(dataset = flowering_data,
                              frst_day = flower_start, lst_day = flower_end,
                              year_samp = year, species )
-head(synchrony)
+synchrony[12:30,c(1,8:9)]
+```
 
-test_dummyp <- synchrony |>
+you may need to convert your values to back to calendar date using something like lubridate::yday
+
+```{r}
+
+synchrony |>
   dplyr::group_by(species) |> 
   dplyr::mutate(ID = 1:dplyr::n(),
                 flower_start_DOY = lubridate::yday(flower_start),
-                flower_end_DOY   = lubridate::yday(flower_end))
-
+                flower_end_DOY   = lubridate::yday(flower_end)) |>
+  
+head(10)
 ```
 
-
+An exciting possibility of this implementation of Augspurgers Index, and which warrants consideration for ephermal crepuscular or nocturnal species, is that it is able to operate on overlapping phenologies within a day, as recorded down to the second. 

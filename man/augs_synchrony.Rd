@@ -25,7 +25,7 @@ Calculate Augspurgers Index of Synchrony from a dataframe.
 }
 \examples{
 library(AugspurgerIndex)
-flowering_data <- data('flowering_data')
+data('flowering_data')
 head(flowering_data)
 synchrony <- augs_synchrony(dataset = flowering_data,
   frst_day = flower_start, lst_day = flower_end,
