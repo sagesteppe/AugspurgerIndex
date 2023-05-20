@@ -14,3 +14,4 @@
 #' @name flowering_data
 #' @usage data(flowering_data)
 #' @format a dataframe with 36 rows and 7 variables.
+'flowering_data'

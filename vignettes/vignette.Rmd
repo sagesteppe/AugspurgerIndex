@@ -23,18 +23,18 @@ The package can be installed from either github, using the remotes package, or C
 
 ```{r Install package, eval = F}
 # install.packages('remotes', dependencies = T)
-remotes::install_github('sagesteppe/AugspurgIndex') # one option 
+remotes::install_github('sagesteppe/AugspurgerIndex') # one option 
 install.packages('AugspurgerIndex')
 ```
 
-```{r attach package to session, message = F, warning = F, eval = F}
+```{r attach package to session, message = F, warning = F}
 library(AugspurgerIndex)
 ```
 
 
-```{r import and view structure of data, eval = F}
+```{r import and view structure of data}
 
-flowering_data <- data('flowering_data')
+flowering_data <- data(flowering_data, package = "AugspurgerIndex")
 
 head(flowering_data)
 ```
