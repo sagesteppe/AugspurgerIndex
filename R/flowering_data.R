@@ -1,21 +1,16 @@
-#' Made up flowering date data
+#' made up floral observation data
 #'
+#' A dataset with 40 made up first and last flower dates for made up species
 #'
-#' @docType data, 'flr' is an abbreviation of flower, 'mdn' abbreviates media, and 'lwr' and 'upr' are lower and upper respetively.
+#' \itemize{
+#'   \item 'species' is a made up name.
+#'   \item 'year' of observations, required to cater day of year (DOY) to leap years.
+#'   \item 'flower_start'. first day of year which a phenological event, in this case flowering, was observed on an individual plant.
+#'   \item 'flower_end' final day of year which the individual was observed to be in flower.
+#' }
 #'
-#' @usage data(flowering_data, package = "AugspurgerIndex")
-#'
-#' @format a dataframe.
-#'
+#' @docType data
 #' @keywords datasets
-#'
-#' @references NA, made up
-#'
-#' @source \href{https://phenome.jax.org/projects/Moore1b}{QTL Archive}
-#'
-#' @examples
-#' data(flowering_data, package = "AugspurgerIndex")
-#' pena_synchrony <- augs_synchrony(dataset = pena_flrs,
-#'   frst_day = flower_start, lst_day = flower_end,
-#'   year_samp = year, species )
-
+#' @name flowering_data
+#' @usage data(flowering_data)
+#' @format a dataframe with 36 rows and 7 variables.

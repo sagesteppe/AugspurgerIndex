@@ -19,7 +19,6 @@ knitr::opts_chunk$set(
 
 This package includes a single function which serves to calculate Augspurgers Index of Synchrony.
 
-
 The package can be installed from either github, using the remotes package, or CRAN. For most users I recommend installing from CRAN. 
 
 ```{r Install package, eval = F}
@@ -35,20 +34,19 @@ library(AugspurgerIndex)
 
 ```{r import and view structure of data, eval = F}
 
-data(flowering_data, package = "AugspurgerIndex")
+flowering_data <- data('flowering_data')
 
-head(pena_flrs)
+head(flowering_data)
 ```
 
 ```{r run function, eval = F}
 
-pena_synchrony <- augs_synchrony(dataset = pena_flrs,
+synchrony <- augs_synchrony(dataset = flowering_data,
                              frst_day = flower_start, lst_day = flower_end,
                              year_samp = year, species )
-head(pena_synchrony)
+head(synchrony)
 
-
-test_dummyp <- pena_synchrony |>
+test_dummyp <- synchrony |>
   dplyr::group_by(species) |> 
   dplyr::mutate(ID = 1:dplyr::n(),
                 flower_start_DOY = lubridate::yday(flower_start),

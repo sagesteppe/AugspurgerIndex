@@ -2,21 +2,20 @@
 % Please edit documentation in R/augs_synchrony.R
 \name{augs_synchrony}
 \alias{augs_synchrony}
-\title{Calculate augspurgers index of synchrony}
+\title{Calculate Augspurgers index of synchrony}
 \usage{
 augs_synchrony(dataset, year_samp, frst_day, lst_day, ...)
 }
 \arguments{
 \item{dataset}{a data frame containing values to perform calculations on}
 
-\item{year_samp}{column holding information on year, required even if all events occur in
-the same year due to leap years.}
+\item{year_samp}{column holding information on year, required even if all events occur in the same year due to leap years}
 
 \item{frst_day}{column containing the INITIATION DATE of a phenological event}
 
-\item{...}{in this case grouping variables (within year!)}
+\item{lst_day}{column containing the FINAL DATE of a phenological event}
 
-\item{lst_dat}{column containing the FINAL DATE of a phenological event}
+\item{...}{in this case grouping variables (within year!)}
 }
 \value{
 a dataframe with attached results, see example
@@ -26,10 +25,11 @@ Calculate Augspurgers Index of Synchrony from a dataframe.
 }
 \examples{
 library(AugspurgerIndex)
-data(flowering_data, package = "AugspurgerIndex")
-head(pena_flrs)
-pena_synchrony <- augs_synchrony(dataset = pena_flrs,
+flowering_data <- data('flowering_data')
+head(flowering_data)
+synchrony <- augs_synchrony(dataset = flowering_data,
   frst_day = flower_start, lst_day = flower_end,
   year_samp = year, species )
-  head(pena_synchrony)
+
+head(synchrony)
 }
