@@ -15,7 +15,9 @@ Suggests:
     dplyr,
     rlang,
     lubridate, 
-    utils
+    utils,
+    knitr,
+    rmarkdown
 VignetteBuilder: utils
 Config/testthat/edition: 3
 RoxygenNote: 7.2.3
