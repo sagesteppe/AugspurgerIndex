@@ -18,7 +18,7 @@ Suggests:
     utils,
     knitr,
     rmarkdown
-VignetteBuilder: utils
+VignetteBuilder: knitr
 Config/testthat/edition: 3
 RoxygenNote: 7.2.3
 Depends: 

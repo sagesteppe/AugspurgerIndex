@@ -33,6 +33,35 @@ This from Augspurger 1983.
 
 ![Retro Panel of Days with Overlapping Flowering](./man/figures/AugsPanel.png)
 
+
+## installation
+
+The package can be installed from either github, using the remotes package, or CRAN. For most users I recommend installing from CRAN. 
+
+```
+install.packages('remotes', dependencies = T)  
+remotes::install_github('sagesteppe/AugspurgerIndex')  
+```
+## citation
+
+```
+citation('AugspurgerIndex')
+```
+
+Please cite AugspurgerIndex in publications using:  
+
+  Reed C. Benkendorf (2023). AugspurgerIndex,  
+  https://github.com/sagesteppe/AugspurgerIndex  
+
+A BibTeX entry for LaTeX users is  
+
+  @Misc{,   
+    title = {AugspurgerIndex},  
+    author = {Reed Clark Benkendorf},  
+    year = {2023},  
+    url = {https://github.com/sagesteppe/AugspurgerIndex},  
+  }  
+
 ## References:
 
 Augspurger, Carol K. *Phenology, Flowering Synchrony, and Fruit Set of Six Neotropical Shrubs.* Biotropica, vol. 15, no. 4, 1983, pp. 257--267. JSTOR, <https://doi.org/10.2307/2387650>. Accessed 19 Mar. 2022.
