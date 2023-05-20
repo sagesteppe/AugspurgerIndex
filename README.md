@@ -31,7 +31,7 @@ This from Augspurger 1983.
 >
 > where $X_{i}$ is synchrony of individual *i* with its conspecifics from part A (above)
 
-![Retro Panel of Days with Overlapping Flowering](./images/AugsPanel.png)
+![Retro Panel of Days with Overlapping Flowering](./man/figures/AugsPanel.png)
 
 ## References:
 
