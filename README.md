@@ -55,12 +55,12 @@ Please cite AugspurgerIndex in publications using:
 
 A BibTeX entry for LaTeX users is  
 
-  @Misc{,   
-    title = {AugspurgerIndex},  
-    author = {Reed Clark Benkendorf},  
-    year = {2023},  
-    url = {https://github.com/sagesteppe/AugspurgerIndex},  
-  }  
+@Misc{,   
+  title = {AugspurgerIndex},  
+  author = {Reed Clark Benkendorf},  
+  year = {2023},  
+  url = {https://github.com/sagesteppe/AugspurgerIndex},  
+}  
 
 ## References:
 

@@ -19,20 +19,26 @@ knitr::opts_chunk$set(
 
 This package includes a single function which serves to calculate Augspurgers Index of Synchrony.
 
-The package can be installed from either github, using the remotes package, or CRAN. For most users I recommend installing from CRAN. 
+The package is installable from github. 
 
 ```{r Install package, eval = F}
+# install.packages('devtools', dependencies = T)
+devtools::install_github('sagesteppe/AugspurgerIndex') # one option 
+# if for some reason installing devtools to your device is challenging, 
+# remotes also offers an install_github function
 # install.packages('remotes', dependencies = T)
-remotes::install_github('sagesteppe/AugspurgerIndex') # one option 
-install.packages('AugspurgerIndex')
+# remotes::install_github('sagesteppe/AugspurgerIndex') 
 ```
 
-
+Once installed the package can be loaded just as any other would. 
 ```{r attach package to session, message = F, warning = F}
 library(AugspurgerIndex)
 ```
 
-The data should be in Day of year format. You can obtain values like this using lubridate::ydoy. As we will show below, this function can also convert back to a standard date format 
+The data should be in Day of year (DOY) format. 
+You can obtain values like this using lubridate::ydoy. As we will show below, this function can also convert back to a standard date format. 
+Please note that lubridate `yday` starts counting from January 1st, at '1'. 
+Also please note because their are leap years, it is always best practice to include the year in the date.  
 
 ```{r}
 lubridate::yday( as.Date('2011-01-01', '%Y-%m-%d') )  # jan 1st, first day of year
@@ -47,14 +53,13 @@ head(flowering_data[,1:4])
 ```
 
 ```{r run function}
-
 synchrony <- augs_synchrony(dataset = flowering_data,
                              frst_day = flower_start, lst_day = flower_end,
                              year_samp = year, species )
 synchrony[12:30,c(1,8:9)]
 ```
 
-you may need to convert your values to back to calendar date using something like lubridate::yday
+You may need to convert your values to back to calendar date using something like lubridate::yday
 
 ```{r}
 
@@ -63,12 +68,12 @@ synchrony |>
   dplyr::mutate(ID = 1:dplyr::n(),
                 flower_start_DOY = lubridate::yday(flower_start),
                 flower_end_DOY   = lubridate::yday(flower_end)) |>
+  head()
   
-head(10)
 ```
 
-An exciting possibility of this implementation of Augspurgers Index, and which warrants consideration for ephemeral crepuscular or nocturnal species, is that it is able to operate on overlapping phenologies within a day, as recorded down to the second. 
-
+If you use this function you can cite is using the details below. 
+An easy name for the bibtex lookup `@` is benkendorf2024augspurger. 
 
 ```{r}
 citation('AugspurgerIndex')
