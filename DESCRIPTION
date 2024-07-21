@@ -22,4 +22,4 @@ VignetteBuilder: knitr
 Config/testthat/edition: 3
 RoxygenNote: 7.2.3
 Depends: 
-    R (>= 2.10)
+    R (>= 3.50)
