@@ -59,14 +59,14 @@ A BibTeX entry for LaTeX users is
   url = {https://github.com/sagesteppe/AugspurgerIndex},  
 }  
 
-# Some notes about Synchrony
+# some notes about synchrony
 
 ![Example event dates of an event](./man/figures/AugsPanel.png)
 ![Example synchrony values](./man/figures/IndexPanel.png)
 
 The fourth pane shows some un-intuitive aspects of the measure of individual synchrony. Individuals 7, 8, 9, 11, and 12, which have no to little overlap with other individuals have very low values of synchrony. Individuals 5, 6, and 10, despite having very short periods of flowering, overlap well with the lowermost individuals, and have the highest values of synchrony. Perhaps counterintuitively, individuals 1-3 which have long periods of flowering, and which overlap with fewer individuals over these time periods are the most asynchronous. In a casual sense metrics of synchrony are simply measuring the overlap in phenophase, without respect to duration.
 
-## References:
+## references:
 
 Augspurger, Carol K. *Phenology, Flowering Synchrony, and Fruit Set of Six Neotropical Shrubs.* Biotropica, vol. 15, no. 4, 1983, pp. 257--267. JSTOR, <https://doi.org/10.2307/2387650>. Accessed 19 Mar. 2022.
 
