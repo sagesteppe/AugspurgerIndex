@@ -31,9 +31,6 @@ This from Augspurger 1983.
 >
 > where $X_{i}$ is synchrony of individual *i* with its conspecifics from part A (above)
 
-![Retro Panel of Days with Overlapping Flowering](./man/figures/AugsPanel.png)
-
-
 ## installation
 
 The package can be installed from either github, using the remotes package, or CRAN. For most users I recommend installing from CRAN. 
@@ -64,9 +61,8 @@ A BibTeX entry for LaTeX users is
 
 # Some notes about Synchrony
 
-![../inst/plots/AugsPanel.png](Example event dates of an event)
-
-![../inst/plots/IndexPanel.png](Example event dates of an event)
+![Example event dates of an event](./man/figures/AugsPanel.png)
+![Example synchrony values](./man/figures/IndexPanel.png)
 
 The fourth pane shows some un-intuitive aspects of the measure of individual synchrony. Individuals 7, 8, 9, 11, and 12, which have no to little overlap with other individuals have very low values of synchrony. Individuals 5, 6, and 10, despite having very short periods of flowering, overlap well with the lowermost individuals, and have the highest values of synchrony. Perhaps counterintuitively, individuals 1-3 which have long periods of flowering, and which overlap with fewer individuals over these time periods are the most asynchronous. In a casual sense metrics of synchrony are simply measuring the overlap in phenophase, without respect to duration.
 
