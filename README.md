@@ -36,8 +36,8 @@ This from Augspurger 1983.
 The package can be installed from either github, using the remotes package, or CRAN. For most users I recommend installing from CRAN. 
 
 ```
-install.packages('remotes', dependencies = T)  
-remotes::install_github('sagesteppe/AugspurgerIndex')  
+install.packages('devtools')  
+devtools::install_github('sagesteppe/AugspurgerIndex')  
 ```
 ## citation
 
