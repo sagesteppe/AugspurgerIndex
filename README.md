@@ -3,8 +3,8 @@
 [![CRAN
 checks](https://badges.cranchecks.info/summary/badger.svg)](https://cran.r-project.org/web/checks/check_results_badger.html)
 [![R build
-status](https://github.com/sagesteppe/eSTZwritR/workflows/R-CMD-check/badge.svg)](https://github.com/sagesteppe/eSTZwritR/actions)
-[![CodeFactor](https://www.codefactor.io/repository/github/sagesteppe/eSTZwritR/badge)](https://www.codefactor.io/repository/github/sagesteppe/eSTZwritR)
+status](https://github.com/sagesteppe/AugspurgerIndex/workflows/R-CMD-check/badge.svg)](https://github.com/sagesteppe/AugspurgerIndex/actions)
+[![CodeFactor](https://www.codefactor.io/repository/github/sagesteppe/AugspurgerIndex/badge)](https://www.codefactor.io/repository/github/sagesteppe/AugspurgerIndex)
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)

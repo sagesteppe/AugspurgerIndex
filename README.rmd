@@ -10,8 +10,8 @@ html_preview: false
 ```{r, echo = FALSE, results='asis'}
 cat(
   badger::badge_cran_checks("badger"), 
-	badger::badge_github_actions('sagesteppe/eSTZwritR'), 
-	badger::badge_codefactor('sagesteppe/eSTZwritR'), 
+	badger::badge_github_actions('sagesteppe/AugspurgerIndex'), 
+	badger::badge_codefactor('sagesteppe/AugspurgerIndex'), 
 	badger::badge_repostatus("Active")
 )
 ```
