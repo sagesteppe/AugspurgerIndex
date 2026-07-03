@@ -7,3 +7,4 @@
 Makefile
 Readme.Rmd
 .github
+^codemeta\.json$

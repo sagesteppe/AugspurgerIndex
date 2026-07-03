@@ -1,0 +1,136 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "AugspurgerIndex",
+  "name": "AugspurgerIndex",
+  "description": "An R package with a single function, augs_synchrony(), that calculates Augspurger's Index of Synchrony (Augspurger 1983, modified from Primack 1980) -- a phenology metric quantifying how much the flowering, or other phenological, periods of individuals in a population overlap in time. Operates on rectangular (tidy) data frames, handles multi-year data including leap years, and supports arbitrary grouping variables.",
+  "keywords": [
+    "phenology",
+    "flowering synchrony",
+    "synchrony index",
+    "Augspurger index",
+    "Primack index",
+    "ecology",
+    "botany",
+    "R package"
+  ],
+  "codeRepository": "https://github.com/sagesteppe/AugspurgerIndex",
+  "issueTracker": "https://github.com/sagesteppe/AugspurgerIndex/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.1.0",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 4.1.0 or later",
+  "operatingSystem": [
+    "Linux",
+    "Windows",
+    "macOS"
+  ],
+  "applicationCategory": "Ecology / Phenology",
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "dplyr",
+      "name": "dplyr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "purrr",
+      "name": "purrr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rlang",
+      "name": "rlang"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "lubridate",
+      "name": "lubridate"
+    }
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Reed Clark",
+      "familyName": "Benkendorf",
+      "email": "reedbenkendorf27@gmail.com"
+    }
+  ],
+  "maintainer": {
+    "@type": "Person",
+    "givenName": "Reed Clark",
+    "familyName": "Benkendorf",
+    "email": "reedbenkendorf27@gmail.com"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "AugspurgerIndex authors"
+  },
+  "copyrightYear": 2023,
+  "dateCreated": "2022-11-22",
+  "identifier_doi": "https://doi.org/10.5281/zenodo.21173019",
+  "citation": [
+    {
+      "@type": "SoftwareSourceCode",
+      "text": "Reed C. Benkendorf (2023). AugspurgerIndex, https://github.com/sagesteppe/AugspurgerIndex"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Phenology, Flowering Synchrony, and Fruit Set of Six Neotropical Shrubs",
+      "author": "Augspurger, Carol K.",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "4",
+        "datePublished": "1983",
+        "isPartOf": {
+          "@type": "PublicationVolume",
+          "volumeNumber": "15",
+          "name": "Biotropica"
+        }
+      },
+      "pageStart": "257",
+      "pageEnd": "267",
+      "sameAs": "https://doi.org/10.2307/2387650"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Reproductive Synchrony of a Tropical Shrub: Experimental Studies on Effects of Pollinators and Seed Predators in Hybanthus Prunifolius (Violaceae)",
+      "author": "Augspurger, Carol K.",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "3",
+        "datePublished": "1981",
+        "isPartOf": {
+          "@type": "PublicationVolume",
+          "volumeNumber": "62",
+          "name": "Ecology"
+        }
+      },
+      "pageStart": "775",
+      "pageEnd": "788",
+      "sameAs": "https://doi.org/10.2307/1937745"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Variation in the Phenology of Natural Populations of Montane Shrubs in New Zealand",
+      "author": "Primack, Richard B.",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "3",
+        "datePublished": "1980",
+        "isPartOf": {
+          "@type": "PublicationVolume",
+          "volumeNumber": "68",
+          "name": "Journal of Ecology"
+        }
+      },
+      "pageStart": "849",
+      "pageEnd": "862",
+      "sameAs": "https://doi.org/10.2307/2259460"
+    }
+  ]
+}
