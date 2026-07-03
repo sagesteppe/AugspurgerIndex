@@ -30,12 +30,12 @@ most often flowering, but applicable to any event with a duration is
 synchronized across individuals in a population. It is calculated in two
 parts:
 
-  - **Part A — individual synchrony (\(X_i\)):** for each individual
+  - **Part A — individual synchrony ($X_i$):** for each individual
     *i*, the proportion of its flowering duration that overlaps with
     every other individual *j* in the population, averaged across all
     *j*.
-  - **Part B — population synchrony (\(Z\)):** the mean of all
-    individual synchrony values (\(X_i\)) across the population.
+  - **Part B — population synchrony ($Z$):** the mean of all
+    individual synchrony values ($X_i$) across the population.
 
 Values range from 0 (no individual overlaps in time with any other
 individual) to 1 (perfect synchrony, i.e. all individuals flower on
@@ -46,18 +46,18 @@ This from Augspurger 1983:
 > ## APPENDIX 1. Methods of Calculating Synchrony (modified from Primack 1980).
 > 
 > **A.** Synchrony of a given individual with its conspecifics:
-> \(X_{i}\), the index of synchrony for individual i, is defined
+> $X_{i}$, the index of synchrony for individual i, is defined
 > 
-> \[
+> $$
 > X_{i} = (\frac{1}{n-1})(\frac{1}{f_{i}})\sum_{j = i}^{n} e_{j != i}
-> \]
+> $$
 > 
 > where,
 > 
-> \(e_{j}\) = number of days both individuals *i* and *j* are flowering
+> $e_{j}$ = number of days both individuals *i* and *j* are flowering
 > synchronously, *j* \!= *i*  
-> \(f_{i}\) = number of days individual *i* is flowering  
-> \(n\) = number of individuals in population
+> $f_{i}$ = number of days individual *i* is flowering  
+> $n$ = number of individuals in population
 > 
 > When X = 1.0, perfect synchrony occurs, i.e., all flowering days of
 > individual *i* overlap with all flowering days of each other
@@ -66,14 +66,14 @@ This from Augspurger 1983:
 > of the flowering days of individual *i* and any other individual, *j
 > =\# i*, in the \> population.
 > 
-> **B.** Synchrony of the population: \(Z\), the index of population
+> **B.** Synchrony of the population: $Z$, the index of population
 > synchrony, is defined as:
 > 
-> \[
+> $$
 > Z= \frac{1}{n}\sum_{j = 1}^{n}X_{i}
-> \]
+> $$
 > 
-> where \(X_{i}\) is synchrony of individual *i* with its conspecifics
+> where $X_{i}$ is synchrony of individual *i* with its conspecifics
 > from part A (above)
 
 ## Why use this package?
@@ -142,8 +142,8 @@ head(synchrony)
     ## 6 lomatium  2014 2014-07-09   2014-07-19            194      192      197
     ## # ℹ 2 more variables: augs.indx.indiv. <dbl>, augs.index.pop <dbl>
 
-`augs.indx.indiv.` is the individual-level synchrony score (\(X_i\)) and
-`augs.index.pop` is the population-level synchrony score (\(Z\)) for
+`augs.indx.indiv.` is the individual-level synchrony score ($X_i$) and
+`augs.index.pop` is the population-level synchrony score ($Z$) for
 that group and year.
 
 ## Citation
