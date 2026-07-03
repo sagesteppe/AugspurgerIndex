@@ -83,10 +83,13 @@ remotes::install_github('sagesteppe/AugspurgerIndex')
 
 `augs_synchrony()` takes a data frame containing, at minimum, a year column and start/end date columns for the phenological event of interest. Any additional columns passed via `...` are used as grouping variables (e.g. species or site), so that synchrony is calculated separately within each group and year.
 
-```{r, message = FALSE}
+```{r example, message = FALSE}
 library(AugspurgerIndex)
+set.seed(23)
+
 data('flowering_data')
-head(flowering_data)
+recs = sample(1:nrow(flowering_data),5)
+flowering_data[recs,]
 
 synchrony <- augs_synchrony(
   dataset = flowering_data,
@@ -94,7 +97,9 @@ synchrony <- augs_synchrony(
   year_samp = year, species
 )
 
-head(synchrony)
+cols = c('species','flower_start', 'flower_end',
+ 'augs.indx.indiv.', 'augs.index.pop')
+synchrony[recs,cols]
 ```
 
 `augs.indx.indiv.` is the individual-level synchrony score ($X_i$) and `augs.index.pop` is the population-level synchrony score ($Z$) for that group and year.

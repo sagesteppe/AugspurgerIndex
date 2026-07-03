@@ -30,11 +30,12 @@ most often flowering, but applicable to any event with a duration is
 synchronized across individuals in a population. It is calculated in two
 parts:
 
-- **Part A — individual synchrony ($`X_i`$):** for each individual *i*,
-  the proportion of its flowering duration that overlaps with every
-  other individual *j* in the population, averaged across all *j*.
-- **Part B — population synchrony ($`Z`$):** the mean of all individual
-  synchrony values ($`X_i`$) across the population.
+  - **Part A — individual synchrony ($X_i$):** for each individual
+    *i*, the proportion of its flowering duration that overlaps with
+    every other individual *j* in the population, averaged across all
+    *j*.
+  - **Part B — population synchrony ($Z$):** the mean of all
+    individual synchrony values ($X_i$) across the population.
 
 Values range from 0 (no individual overlaps in time with any other
 individual) to 1 (perfect synchrony, i.e. all individuals flower on
@@ -43,38 +44,36 @@ exactly the same days).
 This from Augspurger 1983:
 
 > ## APPENDIX 1. Methods of Calculating Synchrony (modified from Primack 1980).
->
+> 
 > **A.** Synchrony of a given individual with its conspecifics:
-> $`X_{i}`$, the index of synchrony for individual i, is defined
->
-> ``` math
->
+> $X_{i}$, the index of synchrony for individual i, is defined
+> 
+> $$
 > X_{i} = (\frac{1}{n-1})(\frac{1}{f_{i}})\sum_{j = i}^{n} e_{j != i}
-> ```
->
+> $$
+> 
 > where,
->
-> $`e_{j}`$ = number of days both individuals *i* and *j* are flowering
-> synchronously, *j* != *i*  
-> $`f_{i}`$ = number of days individual *i* is flowering  
-> $`n`$ = number of individuals in population
->
+> 
+> $e_{j}$ = number of days both individuals *i* and *j* are flowering
+> synchronously, *j* \!= *i*  
+> $f_{i}$ = number of days individual *i* is flowering  
+> $n$ = number of individuals in population
+> 
 > When X = 1.0, perfect synchrony occurs, i.e., all flowering days of
 > individual *i* overlap with all flowering days of each other
 > individual, *j \# i*, in the \> population.  
 > When X = 0.0, no synchrony occurs, i.e., no overlap occurs among any
 > of the flowering days of individual *i* and any other individual, *j
-> =# i*, in the \> population.
->
-> **B.** Synchrony of the population: $`Z`$, the index of population
+> =\# i*, in the \> population.
+> 
+> **B.** Synchrony of the population: $Z$, the index of population
 > synchrony, is defined as:
->
-> ``` math
->
+> 
+> $$
 > Z= \frac{1}{n}\sum_{j = 1}^{n}X_{i}
-> ```
->
-> where $`X_{i}`$ is synchrony of individual *i* with its conspecifics
+> $$
+> 
+> where $X_{i}$ is synchrony of individual *i* with its conspecifics
 > from part A (above)
 
 ## Why use this package?
@@ -84,12 +83,12 @@ have since been removed for failing builds, or only work on
 non-rectangular data. `AugspurgerIndex` is a minimal, dependency-light
 re-implementation that:
 
-- accepts standard rectangular (tidy) data frames,
-- correctly handles multi-year data sets, including leap years,
-- supports grouping by any number of variables (e.g. species, site,
-  plot) via `...`,
-- returns results in the same data frame passed in, so they can be piped
-  directly into further analysis or plotting.
+  - accepts standard rectangular (tidy) data frames,
+  - correctly handles multi-year data sets, including leap years,
+  - supports grouping by any number of variables (e.g. species, site,
+    plot) via `...`,
+  - returns results in the same data frame passed in, so they can be
+    piped directly into further analysis or plotting.
 
 ## Installation
 
@@ -109,17 +108,19 @@ separately within each group and year.
 
 ``` r
 library(AugspurgerIndex)
+set.seed(23)
+
 data('flowering_data')
-head(flowering_data)
+recs = sample(1:nrow(flowering_data),5)
+flowering_data[recs,]
 ```
 
-    ##    species year flower_start flower_end median_flowers lower_sd upper_sd
-    ## 1 musineon 2013          200        205            203      201      204
-    ## 2 musineon 2013          206        210            208      207      209
-    ## 3 musineon 2013          211        215            213      212      214
-    ## 4 musineon 2013          216        220            218      217      219
-    ## 5 musineon 2013          221        225            223      222      224
-    ## 6 lomatium 2014          190        200            194      192      197
+    ##      species year flower_start flower_end median_flowers lower_sd upper_sd
+    ## 29  tauschia 2012          250        252            251      250      252
+    ## 28  tauschia 2012          240        260            251      247      256
+    ## 8   lomatium 2014          190        200            193      191      196
+    ## 17 podistera 2011          180        190            185      183      187
+    ## 23 podistera 2011          191        200            195      192      196
 
 ``` r
 synchrony <- augs_synchrony(
@@ -128,23 +129,23 @@ synchrony <- augs_synchrony(
   year_samp = year, species
 )
 
-head(synchrony)
+cols = c('species','flower_start', 'flower_end',
+ 'augs.indx.indiv.', 'augs.index.pop')
+synchrony[recs,cols]
 ```
 
-    ## # A tibble: 6 × 9
-    ## # Groups:   year, species [2]
-    ##   species   year flower_start flower_end median_flowers lower_sd upper_sd
-    ##   <chr>    <int> <date>       <date>              <int>    <int>    <int>
-    ## 1 musineon  2013 2013-07-19   2013-07-24            203      201      204
-    ## 2 musineon  2013 2013-07-25   2013-07-29            208      207      209
-    ## 3 musineon  2013 2013-07-30   2013-08-03            213      212      214
-    ## 4 musineon  2013 2013-08-04   2013-08-08            218      217      219
-    ## 5 musineon  2013 2013-08-09   2013-08-13            223      222      224
-    ## 6 lomatium  2014 2014-07-09   2014-07-19            194      192      197
-    ## # ℹ 2 more variables: augs.indx.indiv. <dbl>, augs.index.pop <dbl>
+    ## # A tibble: 5 × 5
+    ## # Groups:   species [3]
+    ##   species   flower_start flower_end augs.indx.indiv. augs.index.pop
+    ##   <chr>     <date>       <date>                <dbl>          <dbl>
+    ## 1 tauschia  2012-09-06   2012-09-08            0.5            0.223
+    ## 2 tauschia  2012-08-27   2012-09-16            0.421          0.223
+    ## 3 lomatium  2014-07-09   2014-07-19            1              1    
+    ## 4 podistera 2011-06-29   2011-07-09            0.636          0.630
+    ## 5 podistera 2011-07-10   2011-07-19            0.636          0.630
 
-`augs.indx.indiv.` is the individual-level synchrony score ($`X_i`$) and
-`augs.index.pop` is the population-level synchrony score ($`Z`$) for
+`augs.indx.indiv.` is the individual-level synchrony score ($X_i$) and
+`augs.index.pop` is the population-level synchrony score ($Z$) for
 that group and year.
 
 ## Citation
