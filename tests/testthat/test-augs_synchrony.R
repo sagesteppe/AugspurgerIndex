@@ -66,7 +66,6 @@ test_that("a single individual in a group returns NaN rather than erroring", {
 })
 
 test_that("works on the bundled flowering_data example", {
-  data("flowering_data", package = "AugspurgerIndex")
   res <- augs_synchrony(
     dataset = flowering_data, frst_day = flower_start, lst_day = flower_end,
     year_samp = year, species

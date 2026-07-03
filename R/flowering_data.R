@@ -8,7 +8,9 @@
 #'   \item{year}{Year of observation (used for day-of-year calculations, accounting for leap years).}
 #'   \item{flower_start}{First day of year when an individual plant was observed in flower.}
 #'   \item{flower_end}{Last day of year when an individual plant was observed in flower.}
-#'   \item{additional_var1}{Description of any other variables if present.}
+#'   \item{median_flowers}{Median number of flowers per plant on that day estimate}
+#'   \item{lower_sd}{If flowers are estimated, lower}
+#'   \item{upper_sd}{If flowers are estimated, upper}
 #' }
 #'
 #' @docType data

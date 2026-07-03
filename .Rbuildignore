@@ -5,4 +5,5 @@
 ^pkgdown$
 ^LICENSE\.md$
 Makefile
-Readme.rmd
+Readme.Rmd
+.github
