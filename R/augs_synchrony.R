@@ -73,8 +73,7 @@ augs_synchrony <- function(dataset, year_samp, frst_day, lst_day, ...){
     dplyr::mutate(augs.index.pop = .data$bt1 * .data$bt2) |>
 
     # clean return data
-    dplyr::select(-.data$at1, -.data$at2, -.data$at3, -.data$bt1,
-                  -.data$bt2, -.data$interval_obs)
+    dplyr::select(-at1, -at2, -at3, -bt1, -bt2, -interval_obs)
 
   return(results)
 

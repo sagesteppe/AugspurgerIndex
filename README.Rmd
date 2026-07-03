@@ -13,6 +13,7 @@ cat(
 	badger::badge_github_actions('sagesteppe/AugspurgerIndex'), 
 	badger::badge_codefactor('sagesteppe/AugspurgerIndex'), 
 	badger::badge_repostatus("Active")
+  badger::badge_doi('10.5281/zenodo.21173019')
 )
 ```
 

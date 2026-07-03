@@ -61,8 +61,7 @@ synchrony[12:30,c(1,8:9)]
 
 You may need to convert your values to back to calendar date using something like lubridate::yday
 
-```{r}
-
+```{r run synchrony function}
 synchrony |>
   dplyr::group_by(species) |> 
   dplyr::mutate(ID = 1:dplyr::n(),
